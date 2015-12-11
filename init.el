@@ -14,8 +14,12 @@
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 6 67108896 1 backspace 126 47 80 114 111 103 114 97 109 109 105 110 103 47 80 121 116 104 111 110 47 return] 0 "%d")) arg)))
 (fset 'run
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([134217761 112 121 116 104 111 110 51 32 126 47 80 114 111 103 114 97 109 109 105 110 103 47 80 121 116 104 111 110 47 102 112 104 47 112 121 116 104 111 110 47 109 97 105 110 46 112 121 return] 0 "%d")) arg)))
+(fset 'projecteuler
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 6 1 67108896 5 backspace 126 47 80 114 111 103 114 97 109 109 105 110 103 47 112 114 111 106 101 99 116 117 backspace 101 117 108 101 114 47 return] 0 "%d")) arg)))
+(fset 'euler
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 6 1 67108896 5 backspace 126 47 80 114 111 103 114 97 109 109 105 110 103 47 112 114 111 106 101 99 116 117 backspace 101 117 108 101 114 47 return] 0 "%d")) arg)))
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-(set-default-font "DejaVu Sans Mono-10")
+(set-default-font "DejaVu Sans Mono-14")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -25,7 +29,8 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(custom-enabled-themes (quote (wombat))))
+ '(custom-enabled-themes (quote (wombat)))
+ '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -33,3 +38,8 @@
  ;; If there is more than one, they won't work right.
  )
 (set-cursor-color "#FFFF00")
+(add-hook 'dired-load-hook '(lambda () (require 'dired-x))) ; Load Dired X when Dired is loaded.
+(setq dired-omit-mode t) ; Turn on Omit mode.
+(setq column-number-mode t) ; Turn on Column Number mode.
+(add-to-list 'load-path "~/.emacs.d/manually_added/")
+(require 'go-mode-autoloads)

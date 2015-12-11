@@ -1,2 +1,1 @@
-# .emacs.d
-My emacs configuration fies.
+This repository contains my Emacs configuration files.
