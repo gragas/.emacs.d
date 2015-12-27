@@ -18,6 +18,8 @@
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 6 1 67108896 5 backspace 126 47 80 114 111 103 114 97 109 109 105 110 103 47 112 114 111 106 101 99 116 117 backspace 101 117 108 101 114 47 return] 0 "%d")) arg)))
 (fset 'euler
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 6 1 67108896 5 backspace 126 47 80 114 111 103 114 97 109 109 105 110 103 47 112 114 111 106 101 99 116 117 backspace 101 117 108 101 114 47 return] 0 "%d")) arg)))
+(fset 'go
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 6 1 67108896 5 backspace 126 47 80 114 111 103 114 97 109 109 105 110 103 47 103 111 47 115 114 99 47 103 105 116 104 117 98 46 99 111 109 47 103 114 97 103 97 115 47 return] 0 "%d")) arg)))
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (set-default-font "DejaVu Sans Mono-14")
 (custom-set-variables
@@ -43,3 +45,4 @@
 (setq column-number-mode t) ; Turn on Column Number mode.
 (add-to-list 'load-path "~/.emacs.d/manually_added/")
 (require 'go-mode-autoloads)
+(require 'fireplace)
