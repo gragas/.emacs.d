@@ -25,7 +25,7 @@
 (fset 'bliss
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 6 67108896 1 backspace 126 47 80 114 111 103 114 97 109 109 105 110 103 47 98 108 105 115 115 47 return] 0 "%d")) arg)))
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-(set-default-font "DejaVu Sans Mono-14")
+(set-default-font "Hack-8") ;; https://github.com/chrissimpkins/Hack/tree/master/build/webfonts/fonts/web-ttf
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -71,3 +71,5 @@
     (switch-to-buffer other-buffer)
     (switch-to-buffer-other-window this-buffer)
     (other-window -1)))
+(fset 'goland
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 6 67108896 1 backspace 126 47 79 backspace 80 114 111 103 114 97 109 109 105 110 103 47 103 111 47 115 114 99 47 103 105 116 104 117 98 46 99 111 109 47 103 114 97 103 97 115 47 return] 0 "%d")) arg)))
